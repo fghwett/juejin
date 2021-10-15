@@ -2,10 +2,11 @@ package task
 
 import (
 	"fmt"
-	"github.com/fghwett/juejin/config"
-	"github.com/fghwett/juejin/util"
 	"net/http"
 	"strings"
+
+	"github.com/fghwett/juejin/config"
+	"github.com/fghwett/juejin/util"
 )
 
 type Task struct {
