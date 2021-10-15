@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/fghwett/juejin/util"
 	"log"
 	"os"
 
@@ -21,6 +22,8 @@ func main() {
 		fmt.Printf("读取配置文件失败 err: %s", err)
 		os.Exit(-1)
 	}
+
+	util.BigSleep(5, 20)
 
 	t := task.New(conf.Config)
 	t.Do()

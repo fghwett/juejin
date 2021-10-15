@@ -31,10 +31,14 @@ func (t *Task) Do() {
 		return
 	}
 
+	util.SmallSleep(1000, 3000)
+
 	if err := t.lotteryTask(); err != nil {
 		t.result = append(t.result, fmt.Sprintf("【抽奖任务】：失败 %s", err))
 		return
 	}
+
+	util.SmallSleep(3000, 5000)
 
 	if err := t.getPointTask(); err != nil {
 		t.result = append(t.result, fmt.Sprintf("【积分查询】：失败 %s", err))
