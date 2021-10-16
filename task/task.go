@@ -57,7 +57,6 @@ func (t *Task) signTask() error {
 	req.Header.Set("referer", "https://juejin.cn/")
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("User-Agent", t.userAgent)
-	req.Header.Set("Accept-Encoding", "gzip, deflate, br")
 	req.Header.Set("cookie", t.cookie)
 
 	resp, err := t.client.Do(req)
@@ -85,7 +84,6 @@ func (t *Task) lotteryTask() error {
 	req.Header.Set("referer", "https://juejin.cn/")
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("User-Agent", t.userAgent)
-	req.Header.Set("Accept-Encoding", "gzip, deflate, br")
 	req.Header.Set("cookie", t.cookie)
 
 	resp, err := t.client.Do(req)
@@ -113,7 +111,6 @@ func (t *Task) getPointTask() error {
 	req.Header.Set("referer", "https://juejin.cn/")
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("User-Agent", t.userAgent)
-	req.Header.Set("Accept-Encoding", "gzip, deflate, br")
 	req.Header.Set("cookie", t.cookie)
 
 	resp, err := t.client.Do(req)
